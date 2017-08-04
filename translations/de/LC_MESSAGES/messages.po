@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Flex 2.1.0\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2017-03-14 00:10-0300\n"
+"POT-Creation-Date: 2017-08-04 23:23+0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Alexandre Vicenzi <alexandrevicenzi@outlook.com>, 2016\n"
 "Language: de\n"
@@ -20,19 +20,20 @@ msgstr ""
 "Generated-By: Babel 2.3.4\n"
 
 #: templates/archives.html:2 templates/archives.html:7
+#: templates/period_archives.html:2 templates/period_archives.html:7
 msgid "Archives"
 msgstr "Archive"
 
-#: templates/article.html:17 templates/index.html:20
+#: templates/article.html:22
 #, python-format
 msgid "Posted on %(when)s in %(category)s"
 msgstr "Online seit %(when)s in %(category)s"
 
-#: templates/article.html:52
+#: templates/article.html:57
 msgid "Like this article? Share it with your friends!"
 msgstr "Gef&auml;llt dir der Artikel? Dann teile ihn mit Freunden!"
 
-#: templates/article.html:61
+#: templates/article.html:68
 msgid "You might enjoy"
 msgstr "Eventuell auch interessant"
 
@@ -41,23 +42,23 @@ msgstr "Eventuell auch interessant"
 msgid "Posts by %(name)s"
 msgstr "Artikel von %(name)s"
 
-#: templates/authors.html:2 templates/authors.html:7
+#: templates/authors.html:3 templates/authors.html:8
 msgid "Authors"
 msgstr "Autoren"
 
-#: templates/base.html:142
+#: templates/base.html:127
 msgid "Home"
 msgstr "Home"
 
-#: templates/base.html:149
+#: templates/base.html:134
 msgid "Atom"
 msgstr "Atom"
 
-#: templates/base.html:153
+#: templates/base.html:138
 msgid "RSS"
 msgstr "RSS"
 
-#: templates/categories.html:2 templates/categories.html:7
+#: templates/categories.html:3 templates/categories.html:8
 msgid "Categories"
 msgstr "Kategorien"
 
@@ -66,24 +67,28 @@ msgstr "Kategorien"
 msgid "Category %(name)s"
 msgstr "Kategorie %(name)s"
 
-#: templates/index.html:25
-msgid "Tagged with"
-msgstr "Stichw&ouml;rter"
+#: templates/index.html:15
+msgid "Upcoming Events"
+msgstr ""
 
-#: templates/index.html:43
-msgid "Continue reading"
-msgstr "Weiterlesen"
+#: templates/index.html:16
+msgid "Coming Soon"
+msgstr ""
+
+#: templates/index.html:18
+msgid "Past Events"
+msgstr ""
 
 #: templates/tag.html:2
 #, python-format
 msgid "Tag %(name)s"
 msgstr "Stichwort %(name)s"
 
-#: templates/tags.html:2 templates/tags.html:7
+#: templates/tags.html:3 templates/tags.html:8
 msgid "Tags"
 msgstr "Stichw&ouml;rter"
 
-#: templates/partial/disqus.html:12
+#: templates/partial/disqus.html:13 templates/partial/duoshuo.html:17
 msgid "Please enable JavaScript to view comments."
 msgstr "Bitte JavaScript aktivieren um die Kommentare zu sehen."
 
@@ -92,6 +97,14 @@ msgstr "Bitte JavaScript aktivieren um die Kommentare zu sehen."
 msgid "Powered by %(pelican_url)s - %(flex_url)s theme by %(alexandrevicenzi_url)s"
 msgstr "Erstellt mit %(pelican_url)s - %(flex_url)s Design von %(alexandrevicenzi_url)s"
 
+#: templates/partial/neighbors.html:5
+msgid "Previous Post"
+msgstr ""
+
+#: templates/partial/neighbors.html:10
+msgid "Next Post"
+msgstr ""
+
 #: templates/partial/pagination.html:5
 msgid "Older Posts"
 msgstr "&Auml;ltere Artikel"
@@ -99,4 +112,16 @@ msgstr "&Auml;ltere Artikel"
 #: templates/partial/pagination.html:10
 msgid "Newer Posts"
 msgstr "Neuere Artikel"
+
+#~ msgid "Comming Soon"
+#~ msgstr ""
+
+#~ msgid "Tagged with"
+#~ msgstr "Stichw&ouml;rter"
+
+#~ msgid "Continue reading"
+#~ msgstr "Weiterlesen"
+
+#~ msgid "No Events"
+#~ msgstr ""
 
