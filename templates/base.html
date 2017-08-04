@@ -2,13 +2,12 @@
   {% macro _(msg) %}
     {{ msg % kwargs }}
   {% endmacro %}
-{% endif %}
-
-<!DOCTYPE html>
+{% endif %}<!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
+  <!--
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
-
+  -->
   {% if USE_LESS %}
     <link rel="stylesheet/less" type="text/css" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/stylesheet/style.less">
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
@@ -89,29 +88,13 @@
         <img src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/img/profile.png" alt="{{ SITETITLE }}" title="{{ SITETITLE }}">
         {% endif %}
       </a>
-      <h1><a href="{{ SITEURL }}">{{ SITETITLE }}</a></h1>
-
-      {% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}
-
-      {% if pages or LINKS %}
-      <nav>
-        <ul class="list">
-          {% if not PAGES_SORT_ATTRIBUTE -%}
-              {% set PAGES_SORT_ATTRIBUTE = 'title' %}
-          {%- endif %}
-          {% for page in pages|sort(attribute=PAGES_SORT_ATTRIBUTE) %}
-          <li><a href="{{ SITEURL }}/{{ page.url }}{% if not DISABLE_URL_HASH %}#{{ page.slug }}{% endif %}">{{ page.title }}</a></li>
-          {% endfor %}
-
-          {% for name, link in LINKS %}
-          <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-          {% endfor %}
-        </ul>
-      </nav>
-      {% endif %}
+      <h4>
+        <b><a href="{{ SITEURL }}">{{ SITETITLE | title }}</a></b>
+        {% if SITESUBTITLE %}<p>{{ SITESUBTITLE }}</p>{% endif %}
+      </h4>
 
       <ul class="social">
-        {% for name, link in SOCIAL %}
+		{% for name, link in SOCIAL %}
         <li><a class="sc-{{ name }}" href="{{ link }}" target="_blank"><i class="fa fa-{{ name }}"></i></a></li>
         {% endfor %}
       </ul>
@@ -141,10 +124,10 @@
 
     {% if MAIN_MENU %}
     <nav>
-      <a href="{{ SITEURL }}">{{ _('Home') }}</a>
+      <a href="{{ SITEURL }}/">{{ _('Home') }}</a>
 
-      {% for title, link in MENUITEMS %}
-      <a href="{{ link }}">{{ title }}</a>
+      {% for page in pages|sort(attribute='navbar_order', reverse=True) %}
+      <a href="{{ SITEURL }}/{{ page.url }}">{{ page.navbar_title }}</a>
       {% endfor %}
 
       {% if FEED_ALL_ATOM %}
